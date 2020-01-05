@@ -4,14 +4,14 @@ kind: Application
 metadata:
   name: apps
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: demo
+    namespace: argocd
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
     path: apps
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
+  syncPolicy:
+    automated: {}
