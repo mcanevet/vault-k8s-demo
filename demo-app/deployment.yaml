@@ -12,10 +12,6 @@ spec:
   replicas: 1
   template:
     metadata:
-      annotations:
-        vault.hashicorp.com/agent-inject: "true"
-        vault.hashicorp.com/agent-inject-secret-helloworld: "secret/helloworld"
-        vault.hashicorp.com/role: "myapp"
       labels:
         app: vault-agent-demo
     spec:
