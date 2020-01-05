@@ -1,0 +1,10 @@
+---
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/mcanevet/vault-k8s-demo.git
+    targetRevision: HEAD
+
+acme:
+  email: mickael.canevet@gmail.com
